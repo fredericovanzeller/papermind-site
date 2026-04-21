@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PaperMind — Ask anything about your own documents</title>
+<title>PaperMind — Find the answer in your own paperwork</title>
 <meta name="description" content="Privacy-first document AI for macOS and iPhone. Scan, index, and question your documents — 100% on your device.">
-<meta property="og:title" content="PaperMind — Ask anything about your own documents">
-<meta property="og:description" content="Privacy-first document AI for macOS and iPhone. Your documents never leave your device.">
+<meta property="og:title" content="PaperMind — Find the answer in your own paperwork">
+<meta property="og:description" content="Your documents know more than you remember. PaperMind finds the answer, cites the page, never leaves your Mac.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fredericovanzeller.github.io/papermind-site/">
+<meta property="og:image" content="https://fredericovanzeller.github.io/papermind-site/assets/icons/icon_1024x1024.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://fredericovanzeller.github.io/papermind-site/assets/icons/icon_1024x1024.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -40,7 +45,6 @@ body {
 a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
 a:hover { opacity: 0.8; }
 
-/* ── NAV ── */
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   padding: 1rem 2rem;
@@ -81,7 +85,6 @@ a:hover { opacity: 0.8; }
 }
 .lang-toggle button:hover:not(.active) { color: var(--text-muted); }
 
-/* ── HERO ── */
 .hero {
   padding: 9rem 2rem 4rem;
   max-width: 1100px; margin: 0 auto;
@@ -105,9 +108,7 @@ a:hover { opacity: 0.8; }
   font-weight: 400; line-height: 1.1; margin-bottom: 1.5rem;
   letter-spacing: -0.02em;
 }
-.hero h1 em {
-  font-style: italic; color: var(--accent);
-}
+.hero h1 em { font-style: italic; color: var(--accent); }
 .hero-sub {
   font-size: 1.05rem; color: var(--text-muted);
   max-width: 480px; line-height: 1.7;
@@ -126,10 +127,7 @@ a:hover { opacity: 0.8; }
   margin-top: 1.25rem; font-size: 13px; color: var(--text-dim);
 }
 
-/* Screenshot mockup */
-.hero-visual {
-  position: relative;
-}
+.hero-visual { position: relative; }
 .app-window {
   background: var(--bg-card);
   border: 1px solid var(--border-strong);
@@ -147,14 +145,8 @@ a:hover { opacity: 0.8; }
 .app-dot.r { background: #ff5f57; }
 .app-dot.y { background: #febc2e; }
 .app-dot.g { background: #28c840; }
-.app-title {
-  margin-left: 10px; font-size: 12px;
-  color: var(--text-dim); font-weight: 500;
-}
-.app-body {
-  padding: 24px;
-  min-height: 280px;
-}
+.app-title { margin-left: 10px; font-size: 12px; color: var(--text-dim); font-weight: 500; }
+.app-body { padding: 24px; min-height: 280px; }
 .chat-q {
   font-size: 14px; color: var(--text);
   background: var(--bg-elevated);
@@ -162,14 +154,8 @@ a:hover { opacity: 0.8; }
   margin-bottom: 16px;
   display: flex; gap: 10px; align-items: flex-start;
 }
-.chat-q::before {
-  content: '›'; color: var(--accent); font-weight: 600;
-  flex-shrink: 0;
-}
-.chat-a {
-  font-size: 13px; color: var(--text-muted); line-height: 1.7;
-  padding: 0 4px 12px;
-}
+.chat-q::before { content: '›'; color: var(--accent); font-weight: 600; flex-shrink: 0; }
+.chat-a { font-size: 13px; color: var(--text-muted); line-height: 1.7; padding: 0 4px 12px; }
 .chat-a strong { color: var(--text); font-weight: 500; }
 .chat-source {
   display: inline-flex; align-items: center; gap: 6px;
@@ -182,20 +168,14 @@ a:hover { opacity: 0.8; }
 }
 .chat-source::before { content: '◇'; font-size: 10px; }
 
-/* Screenshot placeholder note (delete when real screenshots added) */
 .placeholder-note {
   position: absolute; top: -32px; right: 0;
   font-size: 10px; color: var(--text-dim);
   font-family: var(--sans); letter-spacing: 0.05em;
-  text-transform: uppercase;
-  opacity: 0.6;
+  text-transform: uppercase; opacity: 0.6;
 }
 
-/* ── SECTIONS ── */
-.section {
-  max-width: 980px; margin: 0 auto;
-  padding: 5rem 2rem;
-}
+.section { max-width: 980px; margin: 0 auto; padding: 5rem 2rem; }
 .section-label {
   font-size: 12px; font-weight: 500; color: var(--accent);
   letter-spacing: 1.5px; text-transform: uppercase;
@@ -210,92 +190,121 @@ a:hover { opacity: 0.8; }
 }
 .section-title em { font-style: italic; color: var(--accent); }
 
-/* ── HOW IT WORKS ── */
-.steps {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;
-}
-.step {
-  border-top: 1px solid var(--border);
-  padding-top: 1.25rem;
-}
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+.step { border-top: 1px solid var(--border); padding-top: 1.25rem; }
 .step-num {
   font-family: var(--serif);
   font-size: 1.75rem; color: var(--accent);
   margin-bottom: 0.5rem; line-height: 1;
 }
-.step-title {
-  font-size: 15px; font-weight: 500; color: var(--text);
-  margin-bottom: 0.5rem;
-}
-.step-desc {
-  font-size: 13px; color: var(--text-muted); line-height: 1.6;
-}
+.step-title { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 0.5rem; }
+.step-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 
-/* ── PRIVACY ── */
+/* PRIVACY — redesigned */
 .privacy {
-  background: var(--bg-card);
+  background: linear-gradient(180deg, var(--bg-card) 0%, #0f0f0f 100%);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  padding: 5rem 2rem;
-  margin: 3rem 0;
-  position: relative;
-  overflow: hidden;
+  padding: 6rem 2rem;
+  margin: 4rem 0;
+  position: relative; overflow: hidden;
 }
-.privacy-inner {
-  max-width: 980px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 4rem; align-items: center;
-  position: relative; z-index: 2;
-}
+.privacy-inner { max-width: 1080px; margin: 0 auto; position: relative; z-index: 2; }
 .privacy::before {
   content: 'PRIVATE';
   position: absolute; top: 50%; left: 50%;
   transform: translate(-50%, -50%) rotate(-12deg);
   font-family: var(--serif); font-style: italic;
-  font-size: clamp(8rem, 18vw, 18rem); font-weight: 400;
-  color: rgba(201,255,87,0.025);
+  font-size: clamp(8rem, 20vw, 20rem); font-weight: 400;
+  color: rgba(201,255,87,0.03);
   white-space: nowrap; pointer-events: none;
   letter-spacing: -0.02em;
 }
-.flow {
-  display: flex; flex-direction: column;
+.privacy-header { text-align: center; max-width: 620px; margin: 0 auto 4rem; }
+.privacy-header .section-title { margin-left: auto; margin-right: auto; margin-bottom: 1.25rem; }
+.privacy-header p { font-size: 1rem; color: var(--text-muted); line-height: 1.75; }
+
+.flow-chain {
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem; position: relative;
 }
-.flow-step {
-  display: flex; gap: 14px; align-items: center;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--border);
+.flow-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  position: relative;
+  transition: border-color 0.2s, transform 0.2s;
 }
-.flow-step:last-child { border-bottom: none; }
-.flow-icon {
-  width: 36px; height: 36px; min-width: 36px;
-  border-radius: 8px;
+.flow-card:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+.flow-card.final {
+  border-color: rgba(201,255,87,0.3);
+  background: rgba(201,255,87,0.03);
+}
+.flow-icon-wrap {
+  width: 44px; height: 44px;
+  margin: 0 auto 1rem;
+  border-radius: 10px;
   background: rgba(201,255,87,0.08);
   border: 1px solid rgba(201,255,87,0.15);
   display: flex; align-items: center; justify-content: center;
-  font-size: 14px; color: var(--accent);
 }
-.flow-text { font-size: 14px; color: var(--text); font-weight: 500; }
-.flow-sub { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
+.flow-card.final .flow-icon-wrap {
+  background: rgba(201,255,87,0.15);
+  border-color: rgba(201,255,87,0.35);
+}
+.flow-icon-wrap svg {
+  width: 20px; height: 20px;
+  stroke: var(--accent); fill: none; stroke-width: 1.75;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.flow-title { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 0.35rem; line-height: 1.35; }
+.flow-sub { font-size: 11px; color: var(--text-dim); line-height: 1.5; }
 
-/* ── FAQ ── */
-.faq {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+.flow-arrow {
+  position: absolute; top: 40%; right: -14px;
+  width: 24px; height: 1px;
+  background: var(--border-strong); z-index: 1;
 }
+.flow-arrow::after {
+  content: '';
+  position: absolute; right: 0; top: -3px;
+  border-left: 6px solid var(--text-dim);
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+}
+.flow-card:last-child .flow-arrow { display: none; }
+
+.privacy-claims {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.privacy-claim {
+  font-size: 13px; color: var(--text-muted);
+  font-weight: 500;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.privacy-claim::before {
+  content: '×'; color: var(--accent);
+  font-weight: 400; font-size: 16px;
+}
+
+.faq { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .faq-item {
   padding: 1.5rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 12px;
 }
-.faq-q {
-  font-size: 14px; font-weight: 500; color: var(--text);
-  margin-bottom: 0.5rem;
-}
-.faq-a {
-  font-size: 13px; color: var(--text-muted); line-height: 1.65;
-}
+.faq-q { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 0.5rem; }
+.faq-a { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
 
-/* ── WAITLIST ── */
 .waitlist {
   max-width: 600px; margin: 0 auto;
   padding: 6rem 2rem;
@@ -305,17 +314,16 @@ a:hover { opacity: 0.8; }
   font-family: var(--serif);
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 400; line-height: 1.15;
-  letter-spacing: -0.01em; margin-bottom: 1rem;
+  letter-spacing: -0.01em; margin-bottom: 1.25rem;
 }
 .waitlist h2 em { font-style: italic; color: var(--accent); }
 .waitlist p {
   font-size: 15px; color: var(--text-muted);
-  margin-bottom: 2.5rem; max-width: 480px;
+  margin-bottom: 2.5rem; max-width: 500px;
   margin-left: auto; margin-right: auto;
+  line-height: 1.75;
 }
-.waitlist-form {
-  display: flex; gap: 8px; max-width: 460px; margin: 0 auto;
-}
+.waitlist-form { display: flex; gap: 8px; max-width: 460px; margin: 0 auto; }
 .waitlist-input {
   flex: 1;
   background: var(--bg-card);
@@ -333,6 +341,7 @@ a:hover { opacity: 0.8; }
   font-family: var(--sans); font-size: 14px; font-weight: 500;
   padding: 14px 22px; border-radius: 10px;
   cursor: pointer; transition: background 0.15s;
+  white-space: nowrap;
 }
 .waitlist-button:hover { background: var(--accent-dim); }
 .waitlist-success {
@@ -346,7 +355,6 @@ a:hover { opacity: 0.8; }
 .waitlist-success.show { display: block; }
 .waitlist-form.hide { display: none; }
 
-/* ── FOOTER ── */
 .footer {
   border-top: 1px solid var(--border);
   padding: 3rem 2rem 2.5rem;
@@ -354,32 +362,25 @@ a:hover { opacity: 0.8; }
   display: flex; justify-content: space-between; align-items: center;
   flex-wrap: wrap; gap: 1.5rem;
 }
-.footer-left {
-  font-size: 13px; color: var(--text-dim);
-  line-height: 1.6;
-}
+.footer-left { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
 .footer-left strong { color: var(--text-muted); font-weight: 500; }
-.footer-links {
-  display: flex; gap: 20px;
-}
-.footer-links a {
-  font-size: 13px; color: var(--text-muted); font-weight: 500;
-}
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { font-size: 13px; color: var(--text-muted); font-weight: 500; }
 .footer-links a:hover { color: var(--text); opacity: 1; }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 820px) {
   .nav { padding: 0.875rem 1.25rem; }
   .nav-links { display: none; }
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 7rem 1.5rem 3rem;
-    gap: 3rem;
-  }
+  .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; gap: 3rem; }
   .hero-visual { order: 2; }
   .section { padding: 3.5rem 1.5rem; }
-  .privacy { padding: 3.5rem 1.5rem; margin: 2rem 0; }
-  .privacy-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .privacy { padding: 4rem 1.5rem; margin: 2rem 0; }
+  .flow-chain { grid-template-columns: 1fr; gap: 0.75rem; }
+  .flow-arrow {
+    top: auto; right: auto; bottom: -14px; left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+  }
+  .privacy-claims { gap: 1.25rem; flex-direction: column; align-items: center; }
   .steps { grid-template-columns: 1fr 1fr; gap: 1.75rem; }
   .faq { grid-template-columns: 1fr; }
   .waitlist { padding: 4rem 1.5rem; }
@@ -406,12 +407,11 @@ a:hover { opacity: 0.8; }
   </div>
 </nav>
 
-<!-- HERO -->
 <header class="hero">
   <div>
-    <div class="hero-label" data-i18n="hero-label">100% on your device</div>
-    <h1 data-i18n="hero-title">Ask anything about <em>your own documents.</em></h1>
-    <p class="hero-sub" data-i18n="hero-sub">Scan with your iPhone. The Mac indexes everything automatically. Then ask questions in plain language. Nothing leaves your device. Nobody else's cloud.</p>
+    <div class="hero-label" data-i18n="hero-label">100% on your Mac. Nothing in anyone's cloud.</div>
+    <h1 data-i18n="hero-title">Find the answer in your <em>own paperwork,</em> in five seconds.</h1>
+    <p class="hero-sub" data-i18n="hero-sub">Scan with your iPhone. Ask on your Mac. The documents never leave your devices — and neither does the answer.</p>
     <a href="#waitlist" class="hero-cta" data-i18n="hero-cta">Join the waitlist</a>
     <div class="hero-meta" data-i18n="hero-meta">For macOS · Apple Silicon · Coming soon</div>
   </div>
@@ -433,7 +433,6 @@ a:hover { opacity: 0.8; }
   </div>
 </header>
 
-<!-- HOW IT WORKS -->
 <section class="section" id="how">
   <div class="section-label" data-i18n="how-label">How it works</div>
   <h2 class="section-title" data-i18n="how-title">Four steps. <em>Zero cloud.</em></h2>
@@ -461,55 +460,65 @@ a:hover { opacity: 0.8; }
   </div>
 </section>
 
-<!-- PRIVACY -->
 <section class="privacy" id="privacy">
   <div class="privacy-inner">
-    <div>
-      <div class="section-label" data-i18n="priv-label">Privacy</div>
-      <h2 class="section-title" data-i18n="priv-title">Your documents <em>never leave your device.</em></h2>
-      <p style="font-size: 15px; color: var(--text-muted); line-height: 1.75;" data-i18n="priv-desc">Not "encrypted in transit." Not "stored securely on our servers." There is no server. The AI runs on your Mac. The search index lives on your disk. No accounts, no telemetry, no tracking.</p>
+    <div class="privacy-header">
+      <div class="section-label" data-i18n="priv-label">Privacy architecture</div>
+      <h2 class="section-title" data-i18n="priv-title">Your documents <em>never leave your devices.</em></h2>
+      <p data-i18n="priv-desc">Not "encrypted in transit." Not "stored securely on our servers." There is no server. Every step happens inside your Apple ecosystem — and that's the whole point.</p>
     </div>
-    <div class="flow">
-      <div class="flow-step">
-        <div class="flow-icon">▣</div>
-        <div>
-          <div class="flow-text" data-i18n="flow1">iPhone scans the document</div>
-          <div class="flow-sub" data-i18n="flow1s">On-device OCR</div>
+
+    <div class="flow-chain">
+      <div class="flow-card">
+        <div class="flow-icon-wrap">
+          <svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
         </div>
+        <div class="flow-title" data-i18n="flow1">iPhone scans</div>
+        <div class="flow-sub" data-i18n="flow1s">On-device OCR</div>
+        <span class="flow-arrow"></span>
       </div>
-      <div class="flow-step">
-        <div class="flow-icon">↑</div>
-        <div>
-          <div class="flow-text" data-i18n="flow2">Syncs via iCloud Drive</div>
-          <div class="flow-sub" data-i18n="flow2s">Apple's encrypted cloud — not ours</div>
+      <div class="flow-card">
+        <div class="flow-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
         </div>
+        <div class="flow-title" data-i18n="flow2">iCloud Drive</div>
+        <div class="flow-sub" data-i18n="flow2s">Apple's encrypted sync</div>
+        <span class="flow-arrow"></span>
       </div>
-      <div class="flow-step">
-        <div class="flow-icon">▦</div>
-        <div>
-          <div class="flow-text" data-i18n="flow3">Mac processes locally</div>
-          <div class="flow-sub" data-i18n="flow3s">Reading, classification, indexing</div>
+      <div class="flow-card">
+        <div class="flow-icon-wrap">
+          <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="18" x2="12" y2="21"/></svg>
         </div>
+        <div class="flow-title" data-i18n="flow3">Mac indexes</div>
+        <div class="flow-sub" data-i18n="flow3s">Locally, on your disk</div>
+        <span class="flow-arrow"></span>
       </div>
-      <div class="flow-step">
-        <div class="flow-icon">○</div>
-        <div>
-          <div class="flow-text" data-i18n="flow4">AI answers your questions</div>
-          <div class="flow-sub" data-i18n="flow4s">Runs entirely on your Mac. No internet needed.</div>
+      <div class="flow-card">
+        <div class="flow-icon-wrap">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18M3 12h18"/></svg>
         </div>
+        <div class="flow-title" data-i18n="flow4">AI answers</div>
+        <div class="flow-sub" data-i18n="flow4s">Runs on your Mac</div>
+        <span class="flow-arrow"></span>
       </div>
-      <div class="flow-step">
-        <div class="flow-icon">×</div>
-        <div>
-          <div class="flow-text" data-i18n="flow5">No external server. Ever.</div>
-          <div class="flow-sub" data-i18n="flow5s">No accounts. No analytics. No tracking.</div>
+      <div class="flow-card final">
+        <div class="flow-icon-wrap">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="5.6" y1="5.6" x2="18.4" y2="18.4"/></svg>
         </div>
+        <div class="flow-title" data-i18n="flow5">No server</div>
+        <div class="flow-sub" data-i18n="flow5s">Ever. For anything.</div>
       </div>
+    </div>
+
+    <div class="privacy-claims">
+      <span class="privacy-claim" data-i18n="claim1">No accounts</span>
+      <span class="privacy-claim" data-i18n="claim2">No telemetry</span>
+      <span class="privacy-claim" data-i18n="claim3">No analytics</span>
+      <span class="privacy-claim" data-i18n="claim4">No tracking</span>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="section">
   <div class="section-label" data-i18n="faq-label">Questions</div>
   <h2 class="section-title" data-i18n="faq-title">Common questions.</h2>
@@ -541,25 +550,16 @@ a:hover { opacity: 0.8; }
   </div>
 </section>
 
-<!-- WAITLIST -->
 <section class="waitlist" id="waitlist">
-  <h2 data-i18n="wl-title">Be the first to <em>know.</em></h2>
-  <p data-i18n="wl-desc">PaperMind launches soon. Drop your email and we'll let you know the moment it's ready.</p>
+  <h2 data-i18n="wl-title">Your paperwork. Your Mac. <em>Your rules.</em></h2>
+  <p data-i18n="wl-desc">PaperMind launches on Kickstarter soon. Backers get early access and a dedicated line to the developer. Drop your email and we'll tell you the moment backing opens.</p>
   <form class="waitlist-form" id="waitlist-form" action="https://formspree.io/f/mbdqjdyg" method="POST">
-    <input
-      type="email"
-      name="email"
-      class="waitlist-input"
-      placeholder="your@email.com"
-      data-i18n-placeholder="wl-placeholder"
-      required
-    >
-    <button type="submit" class="waitlist-button" data-i18n="wl-button">Notify me</button>
+    <input type="email" name="email" class="waitlist-input" placeholder="your@email.com" data-i18n-placeholder="wl-placeholder" required>
+    <button type="submit" class="waitlist-button" data-i18n="wl-button">Count me in</button>
   </form>
   <div class="waitlist-success" id="waitlist-success" data-i18n="wl-success">You're on the list. We'll be in touch.</div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-left">
     <strong data-i18n="foot-made">Made in Lisbon, Portugal</strong><br>
@@ -572,15 +572,14 @@ a:hover { opacity: 0.8; }
 </footer>
 
 <script>
-// ── Translations ──
 const I18N = {
   en: {
     'nav-how': 'How it works',
     'nav-privacy': 'Privacy',
     'nav-waitlist': 'Waitlist',
-    'hero-label': '100% on your device',
-    'hero-title': 'Ask anything about <em>your own documents.</em>',
-    'hero-sub': "Scan with your iPhone. The Mac indexes everything automatically. Then ask questions in plain language. Nothing leaves your device. Nobody else's cloud.",
+    'hero-label': "100% on your Mac. Nothing in anyone's cloud.",
+    'hero-title': 'Find the answer in your <em>own paperwork,</em> in five seconds.',
+    'hero-sub': 'Scan with your iPhone. Ask on your Mac. The documents never leave your devices — and neither does the answer.',
     'hero-cta': 'Join the waitlist',
     'hero-meta': 'For macOS · Apple Silicon · Coming soon',
     'demo-q': "What's my notice period in the rental contract?",
@@ -596,19 +595,23 @@ const I18N = {
     'step3-desc': 'Type your question in plain language. Any topic. Any language.',
     'step4-title': 'Get sourced answers',
     'step4-desc': 'Every answer cites the exact page. Click to jump straight there.',
-    'priv-label': 'Privacy',
-    'priv-title': 'Your documents <em>never leave your device.</em>',
-    'priv-desc': 'Not "encrypted in transit." Not "stored securely on our servers." There is no server. The AI runs on your Mac. The search index lives on your disk. No accounts, no telemetry, no tracking.',
-    'flow1': 'iPhone scans the document',
+    'priv-label': 'Privacy architecture',
+    'priv-title': 'Your documents <em>never leave your devices.</em>',
+    'priv-desc': 'Not "encrypted in transit." Not "stored securely on our servers." There is no server. Every step happens inside your Apple ecosystem — and that\'s the whole point.',
+    'flow1': 'iPhone scans',
     'flow1s': 'On-device OCR',
-    'flow2': 'Syncs via iCloud Drive',
-    'flow2s': "Apple's encrypted cloud — not ours",
-    'flow3': 'Mac processes locally',
-    'flow3s': 'Reading, classification, indexing',
-    'flow4': 'AI answers your questions',
-    'flow4s': 'Runs entirely on your Mac. No internet needed.',
-    'flow5': 'No external server. Ever.',
-    'flow5s': 'No accounts. No analytics. No tracking.',
+    'flow2': 'iCloud Drive',
+    'flow2s': "Apple's encrypted sync",
+    'flow3': 'Mac indexes',
+    'flow3s': 'Locally, on your disk',
+    'flow4': 'AI answers',
+    'flow4s': 'Runs on your Mac',
+    'flow5': 'No server',
+    'flow5s': 'Ever. For anything.',
+    'claim1': 'No accounts',
+    'claim2': 'No telemetry',
+    'claim3': 'No analytics',
+    'claim4': 'No tracking',
     'faq-label': 'Questions',
     'faq-title': 'Common questions.',
     'faq1q': 'Does it work without internet?',
@@ -623,10 +626,10 @@ const I18N = {
     'faq5a': "Soon. Join the waitlist and you'll be the first to know.",
     'faq6q': 'Can it answer in my language?',
     'faq6a': 'Yes. Ask in English, Portuguese, Spanish, French or German — the AI follows your language.',
-    'wl-title': 'Be the first to <em>know.</em>',
-    'wl-desc': "PaperMind launches soon. Drop your email and we'll let you know the moment it's ready.",
+    'wl-title': 'Your paperwork. Your Mac. <em>Your rules.</em>',
+    'wl-desc': "PaperMind launches on Kickstarter soon. Backers get early access and a dedicated line to the developer. Drop your email and we'll tell you the moment backing opens.",
     'wl-placeholder': 'your@email.com',
-    'wl-button': 'Notify me',
+    'wl-button': 'Count me in',
     'wl-success': "You're on the list. We'll be in touch.",
     'foot-made': 'Made in Lisbon, Portugal',
     'foot-tag': '© 2026 PaperMind · No tracking · No analytics · No cloud',
@@ -637,86 +640,82 @@ const I18N = {
     'nav-how': 'Como funciona',
     'nav-privacy': 'Privacidade',
     'nav-waitlist': 'Lista de espera',
-    'hero-label': '100% no teu dispositivo',
-    'hero-title': 'Pergunta o que quiseres sobre <em>os teus próprios documentos.</em>',
-    'hero-sub': 'Digitaliza com o iPhone. O Mac indexa tudo automaticamente. Depois faz perguntas em linguagem natural. Nada sai do teu dispositivo. Nenhuma cloud de outros.',
+    'hero-label': '100% no teu Mac. Nada na nuvem de ninguém.',
+    'hero-title': 'Encontra a resposta nos <em>teus próprios papéis,</em> em cinco segundos.',
+    'hero-sub': 'Digitaliza com o iPhone. Pergunta no Mac. Os ficheiros ficam onde os guardaste — e a resposta também.',
     'hero-cta': 'Entrar na lista',
     'hero-meta': 'Para macOS · Apple Silicon · Em breve',
     'demo-q': 'Qual é o pré-aviso no contrato de arrendamento?',
-    'demo-a': 'O pré-aviso é de <strong>90 dias</strong>, conforme a Cláusula 4.2 do contrato de arrendamento datado de Março de 2024. A notificação deve ser enviada por carta registada.',
+    'demo-a': 'O pré-aviso é de <strong>90 dias</strong>, conforme a Cláusula 4.2 do contrato de arrendamento de Março de 2024. A notificação tem de ser enviada por carta registada.',
     'demo-source': 'Contrato_Arrendamento_2024.pdf · p. 3',
     'how-label': 'Como funciona',
-    'how-title': 'Quatro passos. <em>Zero cloud.</em>',
-    'step1-title': 'Digitaliza ou importa',
+    'how-title': 'Quatro passos. <em>Zero na nuvem.</em>',
+    'step1-title': 'Digitaliza ou arrasta',
     'step1-desc': 'Tira uma foto com o iPhone ou arrasta um PDF para a app no Mac.',
-    'step2-title': 'Indexado automaticamente',
-    'step2-desc': 'O PaperMind lê, classifica e organiza o documento por ti.',
+    'step2-title': 'Indexado sozinho',
+    'step2-desc': 'O PaperMind lê, arruma e organiza o documento por ti.',
     'step3-title': 'Pergunta o que quiseres',
-    'step3-desc': 'Escreve a tua pergunta em linguagem natural. Qualquer tema. Qualquer língua.',
-    'step4-title': 'Respostas com fonte',
-    'step4-desc': 'Cada resposta cita a página exacta. Carrega para saltares directamente para lá.',
-    'priv-label': 'Privacidade',
-    'priv-title': 'Os teus documentos <em>nunca saem do teu dispositivo.</em>',
-    'priv-desc': 'Não é "encriptado em trânsito". Não é "armazenado em segurança nos nossos servidores". Não há servidor. A IA corre no teu Mac. O índice de pesquisa vive no teu disco. Sem contas, sem telemetria, sem tracking.',
-    'flow1': 'iPhone digitaliza o documento',
-    'flow1s': 'OCR no dispositivo',
-    'flow2': 'Sincroniza via iCloud Drive',
-    'flow2s': 'Cloud encriptada da Apple — não a nossa',
-    'flow3': 'Mac processa localmente',
-    'flow3s': 'Leitura, classificação, indexação',
-    'flow4': 'IA responde às tuas perguntas',
-    'flow4s': 'Corre inteiramente no teu Mac. Sem internet.',
-    'flow5': 'Nunca um servidor externo.',
-    'flow5s': 'Sem contas. Sem análise. Sem tracking.',
+    'step3-desc': 'Escreve em linguagem natural. Qualquer tema. Qualquer língua.',
+    'step4-title': 'Respostas com a fonte',
+    'step4-desc': 'Cada resposta cita a página exacta. Carrega e saltas directamente para lá.',
+    'priv-label': 'Arquitectura da privacidade',
+    'priv-title': 'Os teus ficheiros <em>nunca saem dos teus dispositivos.</em>',
+    'priv-desc': 'Não é "encriptado em trânsito". Não é "guardado em segurança nos nossos servidores". Não há servidor. Cada passo acontece dentro do teu ecossistema Apple — e é esse precisamente o ponto.',
+    'flow1': 'iPhone digitaliza',
+    'flow1s': 'OCR no próprio telemóvel',
+    'flow2': 'iCloud Drive',
+    'flow2s': 'Sincronização encriptada da Apple',
+    'flow3': 'Mac indexa',
+    'flow3s': 'Localmente, no teu disco',
+    'flow4': 'IA responde',
+    'flow4s': 'Corre no teu Mac',
+    'flow5': 'Zero servidor',
+    'flow5s': 'Nunca. Para nada.',
+    'claim1': 'Sem contas',
+    'claim2': 'Sem telemetria',
+    'claim3': 'Sem análise',
+    'claim4': 'Sem rastreio',
     'faq-label': 'Perguntas',
     'faq-title': 'Perguntas frequentes.',
     'faq1q': 'Funciona sem internet?',
-    'faq1a': 'Sim. Após a configuração inicial, o PaperMind funciona totalmente offline. A IA vive no teu Mac.',
-    'faq2q': 'O que acontece aos meus documentos?',
-    'faq2a': 'Nada sai do ecossistema Apple. Os documentos ficam no teu iCloud e só são processados no teu Mac.',
+    'faq1a': 'Sim. Depois da configuração inicial, o PaperMind funciona totalmente offline. A IA vive no teu Mac.',
+    'faq2q': 'O que acontece aos meus ficheiros?',
+    'faq2a': 'Nada sai do ecossistema Apple. Os ficheiros ficam no teu iCloud e só são processados no teu Mac.',
     'faq3q': 'Que Mac é preciso?',
-    'faq3a': 'Qualquer Mac com Apple Silicon (M1 ou mais recente) com uma versão recente do macOS.',
-    'faq4q': 'Que documentos consegue ler?',
-    'faq4a': 'PDFs, Word, texto simples e imagens digitalizadas. Fotografias e screenshots também funcionam.',
+    'faq3a': 'Qualquer Mac com Apple Silicon (M1 ou mais recente), numa versão recente do macOS.',
+    'faq4q': 'Que ficheiros consegue ler?',
+    'faq4a': 'PDFs, Word, texto simples e imagens digitalizadas. Fotografias e capturas de ecrã também.',
     'faq5q': 'Quando posso usar?',
-    'faq5a': 'Em breve. Entra na lista de espera e serás dos primeiros a saber.',
-    'faq6q': 'Consegue responder na minha língua?',
+    'faq5a': 'Em breve. Entra na lista e serás dos primeiros a saber.',
+    'faq6q': 'Responde na minha língua?',
     'faq6a': 'Sim. Pergunta em português, inglês, espanhol, francês ou alemão — a IA segue a tua língua.',
-    'wl-title': 'Sê dos primeiros a <em>saber.</em>',
-    'wl-desc': 'O PaperMind lança em breve. Deixa o teu email e avisamos-te assim que estiver pronto.',
+    'wl-title': 'Os teus papéis. O teu Mac. <em>As tuas regras.</em>',
+    'wl-desc': 'O PaperMind lança em breve no Kickstarter. Quem apoiar tem acesso antecipado e linha directa com o programador. Deixa o teu email e avisamos-te assim que abrir.',
     'wl-placeholder': 'o-teu-email@exemplo.com',
-    'wl-button': 'Avisar-me',
+    'wl-button': 'Quero saber quando abrir',
     'wl-success': 'Estás na lista. Vamos manter-te a par.',
     'foot-made': 'Feito em Lisboa, Portugal',
-    'foot-tag': '© 2026 PaperMind · Sem tracking · Sem análise · Sem cloud',
+    'foot-tag': '© 2026 PaperMind · Sem rastreio · Sem análise · Sem nuvem',
     'foot-privacy': 'Privacidade',
     'foot-terms': 'Termos'
   }
 };
 
-// ── Language switcher ──
 function setLang(lang) {
   document.documentElement.lang = lang;
   document.documentElement.setAttribute('data-lang', lang);
   const dict = I18N[lang];
-
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (dict[key] !== undefined) {
-      el.innerHTML = dict[key];
-    }
+    if (dict[key] !== undefined) el.innerHTML = dict[key];
   });
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.getAttribute('data-i18n-placeholder');
-    if (dict[key] !== undefined) {
-      el.placeholder = dict[key];
-    }
+    if (dict[key] !== undefined) el.placeholder = dict[key];
   });
-
   document.querySelectorAll('.lang-toggle button').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
-
   try { localStorage.setItem('papermind-lang', lang); } catch(e) {}
 }
 
@@ -724,7 +723,6 @@ document.querySelectorAll('.lang-toggle button').forEach(btn => {
   btn.addEventListener('click', () => setLang(btn.dataset.lang));
 });
 
-// Initial language: localStorage > browser > en
 (function() {
   let initial = 'en';
   try {
@@ -738,7 +736,6 @@ document.querySelectorAll('.lang-toggle button').forEach(btn => {
   setLang(initial);
 })();
 
-// ── Waitlist form ──
 document.getElementById('waitlist-form').addEventListener('submit', async function(e) {
   e.preventDefault();
   const form = e.target;
