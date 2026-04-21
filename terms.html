@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PaperMind — Terms of Service</title>
+<meta name="description" content="PaperMind terms of service. Simple, fair terms for a privacy-first document AI app.">
+<meta property="og:title" content="PaperMind — Terms of Service">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fredericovanzeller.github.io/papermind-site/terms">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0a;
+  --bg-card: #141414;
+  --border: #222;
+  --text: #e8e4df;
+  --text-muted: #8a8680;
+  --text-dim: #5a5752;
+  --accent: #c9ff57;
+  --accent-dim: #6b8a1e;
+  --blue: #4a9eff;
+  --serif: 'Instrument Serif', Georgia, serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: var(--sans); font-size: 16px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--accent); color: var(--bg); }
+a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.8; }
+
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 1rem 2rem;
+  background: rgba(10,10,10,0.85); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo { font-weight: 600; font-size: 15px; color: var(--text); letter-spacing: -0.02em; }
+.nav-logo span { color: var(--text-muted); font-weight: 400; margin-left: 8px; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { color: var(--text-muted); font-size: 13px; font-weight: 500; }
+.nav-links a:hover { color: var(--text); opacity: 1; }
+
+.hero {
+  padding: 8rem 2rem 3rem; max-width: 780px; margin: 0 auto;
+}
+.hero-label {
+  font-size: 12px; font-weight: 500; color: var(--accent);
+  letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-weight: 400; line-height: 1.15; margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+.hero-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 600px; line-height: 1.7; }
+
+.section { max-width: 780px; margin: 0 auto; padding: 2.5rem 2rem; }
+.section-title {
+  font-size: 12px; font-weight: 500; color: var(--text-dim);
+  letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem; border-bottom: 1px solid var(--border);
+}
+h3 {
+  font-family: var(--serif); font-size: 1.3rem; font-weight: 400;
+  margin-bottom: 0.75rem; letter-spacing: -0.01em;
+}
+p, li { color: var(--text-muted); font-size: 15px; line-height: 1.75; margin-bottom: 1rem; max-width: 680px; }
+ul { padding-left: 1.25rem; margin-bottom: 1.25rem; }
+li { margin-bottom: 0.5rem; }
+
+.highlight-box {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1.5rem 2rem; margin: 1.5rem 0;
+}
+
+.footer {
+  max-width: 780px; margin: 0 auto; padding: 3rem 2rem;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 1rem;
+}
+.footer-left { font-size: 13px; color: var(--text-dim); }
+.footer-right { font-size: 13px; }
+.footer-right a { color: var(--text-muted); margin-left: 16px; }
+
+@media (max-width: 640px) {
+  .hero { padding: 6rem 1.25rem 2rem; }
+  .section { padding: 2rem 1.25rem; }
+  .nav { padding: 0.75rem 1rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">PaperMind <span>Terms of Service</span></div>
+  <div class="nav-links">
+    <a href="https://fredericovanzeller.github.io/papermind-site/">Home</a>
+    <a href="https://fredericovanzeller.github.io/papermind-site/privacy/">Privacy</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-label">Terms of service</div>
+  <h1>Simple, fair terms.</h1>
+  <p class="hero-sub">These terms govern your use of PaperMind. They're written in plain language because legal clarity shouldn't require a law degree.</p>
+</header>
+
+<section class="section">
+  <div class="section-title">1. What PaperMind is</div>
+  <p>PaperMind is a document management application for macOS and iOS that uses on-device artificial intelligence to index, classify, and answer questions about your personal documents. All processing happens locally on your device. PaperMind is developed by Frederico Van Zeller, a sole developer based in Lisbon, Portugal.</p>
+</section>
+
+<section class="section">
+  <div class="section-title">2. Your data, your responsibility</div>
+  <p>PaperMind processes documents entirely on your device. You are the sole owner and custodian of your documents, your search index, and your AI-generated answers. PaperMind does not have access to, cannot recover, and is not responsible for your local data.</p>
+  <p>You are responsible for maintaining backups of your documents. If you delete the PaperMind data directory or uninstall the app, your indexed data will be lost. PaperMind cannot recover it.</p>
+</section>
+
+<section class="section">
+  <div class="section-title">3. AI-generated answers</div>
+  <p>PaperMind uses a local large language model to generate answers based on your documents. These answers are generated by AI and may contain errors, inaccuracies, or misinterpretations. PaperMind provides source citations so you can verify answers against the original documents.</p>
+  <p>AI-generated answers should not be relied upon as legal, financial, medical, or professional advice. Always verify important information against the source documents and consult qualified professionals for decisions with significant consequences.</p>
+</section>
+
+<section class="section">
+  <div class="section-title">4. Free and Pro tiers</div>
+  <p>PaperMind is available as a free app with a limit of 10 indexed documents. A one-time Pro upgrade removes this limit and unlocks additional features. The Pro upgrade is a one-time purchase — there are no subscriptions, recurring fees, or in-app purchases beyond the Pro unlock.</p>
+  <p>Refund policies for the Pro upgrade follow the standard policies of the distribution platform (Apple App Store or direct purchase). For direct purchases, refund requests can be made within 14 days of purchase by contacting <a href="mailto:fredericovanzeller@gmail.com">fredericovanzeller@gmail.com</a>.</p>
+</section>
+
+<section class="section">
+  <div class="section-title">5. Third-party dependencies</div>
+  <p>PaperMind relies on the following third-party components:</p>
+  <ul>
+    <li><strong>Ollama</strong> — runs the AI model locally on your Mac. Ollama is a separate open-source project with its own license and terms.</li>
+    <li><strong>Apple iCloud Drive</strong> — used for syncing documents between iPhone and Mac. Subject to Apple's terms of service and privacy policy.</li>
+    <li><strong>ChromaDB</strong> — the local vector database used for semantic search. Runs entirely on your device.</li>
+  </ul>
+  <p>PaperMind does not guarantee the availability, performance, or continued development of these third-party components. If Ollama or a required AI model becomes unavailable, PaperMind's AI features may be affected.</p>
+</section>
+
+<section class="section">
+  <div class="section-title">6. System requirements</div>
+  <p>PaperMind requires a Mac with Apple Silicon (M1 or later), macOS 14 (Sonoma) or later, and at least 16 GB of RAM. The AI model requires approximately 17 GB of disk space for the initial download. Performance may vary depending on your hardware configuration and the number of indexed documents.</p>
+</section>
+
+<section class="section">
+  <div class="section-title">7. Limitation of liability</div>
+  <p>PaperMind is provided "as is" without warranties of any kind, either express or implied. To the maximum extent permitted by applicable law, the developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of PaperMind.</p>
+  <p>Specifically, the developer is not liable for: the accuracy of AI-generated answers, loss of data due to software errors or hardware failure, any decisions made based on PaperMind's output, or interruptions in service caused by third-party dependency changes.</p>
+  <p>Nothing in these terms limits or excludes liability for fraud, death or personal injury caused by negligence, or any other liability that cannot be limited under applicable law.</p>
+</section>
+
+<section class="section">
+  <div class="section-title">8. Acceptable use</div>
+  <p>You may use PaperMind for any lawful purpose. You may not attempt to reverse engineer, decompile, or disassemble PaperMind's proprietary code (open-source components are governed by their respective licenses). You may not redistribute PaperMind or use it to provide a competing service.</p>
+</section>
+
+<section class="section">
+  <div class="section-title">9. Changes to these terms</div>
+  <p>We may update these terms to reflect changes in the app or legal requirements. Material changes will be communicated through the app and on this page. Continued use of PaperMind after changes are posted constitutes acceptance of the updated terms.</p>
+</section>
+
+<section class="section">
+  <div class="section-title">10. Governing law</div>
+  <p>These terms are governed by the laws of Portugal. Any disputes shall be subject to the exclusive jurisdiction of the courts of Lisbon, Portugal, without prejudice to any mandatory consumer protection provisions of your country of residence that may apply under EU law.</p>
+</section>
+
+<section class="section">
+  <div class="section-title">Contact</div>
+  <div class="highlight-box">
+    <p style="color: var(--text);"><strong>Frederico Van Zeller</strong></p>
+    <p>Lisbon, Portugal</p>
+    <p>Email: <a href="mailto:fredericovanzeller@gmail.com">fredericovanzeller@gmail.com</a></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-left">Last updated: April 14, 2026</div>
+  <div class="footer-right">
+    <a href="https://fredericovanzeller.github.io/papermind-site/">Website</a>
+    <a href="https://fredericovanzeller.github.io/papermind-site/privacy/">Privacy</a>
+    <a href="https://fredericovanzeller.github.io/papermind-site/press/">Press Kit</a>
+  </div>
+</footer>
+
+</body>
+</html>

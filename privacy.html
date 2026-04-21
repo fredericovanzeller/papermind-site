@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PaperMind — Privacy Policy</title>
+<meta name="description" content="PaperMind privacy policy. Your documents never leave your device. Zero cloud, zero telemetry, zero accounts.">
+<meta property="og:title" content="PaperMind — Privacy Policy">
+<meta property="og:description" content="Your documents never leave your device. Here's exactly how PaperMind handles your data.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fredericovanzeller.github.io/papermind-site/privacy">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0a;
+  --bg-card: #141414;
+  --border: #222;
+  --text: #e8e4df;
+  --text-muted: #8a8680;
+  --text-dim: #5a5752;
+  --accent: #c9ff57;
+  --accent-dim: #6b8a1e;
+  --blue: #4a9eff;
+  --serif: 'Instrument Serif', Georgia, serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: var(--sans); font-size: 16px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--accent); color: var(--bg); }
+a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.8; }
+
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 1rem 2rem;
+  background: rgba(10,10,10,0.85); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo { font-weight: 600; font-size: 15px; color: var(--text); letter-spacing: -0.02em; }
+.nav-logo span { color: var(--text-muted); font-weight: 400; margin-left: 8px; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { color: var(--text-muted); font-size: 13px; font-weight: 500; }
+.nav-links a:hover { color: var(--text); opacity: 1; }
+
+.hero {
+  padding: 8rem 2rem 3rem; max-width: 780px; margin: 0 auto;
+}
+.hero-label {
+  font-size: 12px; font-weight: 500; color: var(--accent);
+  letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-weight: 400; line-height: 1.15; margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+.hero-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 600px; line-height: 1.7; }
+
+.section { max-width: 780px; margin: 0 auto; padding: 2.5rem 2rem; }
+.section-title {
+  font-size: 12px; font-weight: 500; color: var(--text-dim);
+  letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem; border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-family: var(--serif); font-size: 1.3rem; font-weight: 400;
+  margin-bottom: 0.75rem; letter-spacing: -0.01em;
+}
+p, li { color: var(--text-muted); font-size: 15px; line-height: 1.75; margin-bottom: 1rem; max-width: 680px; }
+ul { padding-left: 1.25rem; margin-bottom: 1.25rem; }
+li { margin-bottom: 0.5rem; }
+
+.highlight-box {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1.5rem 2rem; margin: 1.5rem 0;
+}
+.highlight-box p { margin-bottom: 0.5rem; }
+.highlight-box p:last-child { margin-bottom: 0; }
+
+.no-icon { color: var(--accent); font-weight: 600; margin-right: 6px; }
+
+.footer {
+  max-width: 780px; margin: 0 auto; padding: 3rem 2rem;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 1rem;
+}
+.footer-left { font-size: 13px; color: var(--text-dim); }
+.footer-right { font-size: 13px; }
+.footer-right a { color: var(--text-muted); margin-left: 16px; }
+
+@media (max-width: 640px) {
+  .hero { padding: 6rem 1.25rem 2rem; }
+  .section { padding: 2rem 1.25rem; }
+  .nav { padding: 0.75rem 1rem; }
+  .nav-links { gap: 12px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">PaperMind <span>Privacy Policy</span></div>
+  <div class="nav-links">
+    <a href="https://fredericovanzeller.github.io/papermind-site/">Home</a>
+    <a href="https://fredericovanzeller.github.io/papermind-site/press/">Press Kit</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-label">Privacy policy</div>
+  <h1>Your documents never leave your device.</h1>
+  <p class="hero-sub">Not "encrypted in transit." Not "stored securely." Your documents literally never leave your Mac. This policy explains exactly how PaperMind handles your data — and the optional feedback system you can choose to enable.</p>
+</header>
+
+<!-- THE SHORT VERSION -->
+<section class="section">
+  <div class="section-title">The short version</div>
+  <div class="highlight-box">
+    <p><span class="no-icon">&#10005;</span> PaperMind has no server. There is no cloud backend.</p>
+    <p><span class="no-icon">&#10005;</span> No accounts. No sign-up. No email collection (unless you join the waitlist voluntarily).</p>
+    <p><span class="no-icon">&#10005;</span> No telemetry, analytics, or tracking of any kind in the app.</p>
+    <p><span class="no-icon">&#10005;</span> No third-party SDKs that transmit data.</p>
+    <p><span class="no-icon">&#10005;</span> The AI model runs locally on your Mac via Ollama. No API calls to external services.</p>
+    <p><span class="no-icon">&#10005;</span> Documents are processed and indexed entirely on your device.</p>
+    <p style="color: var(--text); margin-top: 1rem;">The only network activity is iCloud Drive syncing between your iPhone and Mac — managed entirely by Apple's encrypted infrastructure, not by PaperMind.</p>
+  </div>
+</section>
+
+<!-- WHAT DATA STAYS ON YOUR DEVICE -->
+<section class="section">
+  <div class="section-title">What stays on your device</div>
+  <h3>Documents and index</h3>
+  <p>Every document you import — PDFs, Word files, images, scans — is stored locally on your Mac in the PaperMind data directory. The text extracted via OCR, the vector embeddings, the search index (ChromaDB), and the BM25 keyword index all reside on your local disk. None of this data is transmitted anywhere.</p>
+
+  <h3>AI processing</h3>
+  <p>PaperMind uses Ollama to run the Gemma 4 language model directly on Apple Silicon. When you ask a question, the AI model processes it locally. No text, question, answer, or document content is sent to any external API, server, or cloud service. The model weights are downloaded once during initial setup from Ollama's public registry — after that, no internet connection is required.</p>
+
+  <h3>iPhone to Mac sync</h3>
+  <p>When you scan a document with the PaperMind iPhone app, the image and OCR text are saved to your personal iCloud Drive folder. iCloud Drive is Apple's infrastructure — encrypted in transit and at rest — and PaperMind has no access to or visibility into the sync process. Once the file arrives on your Mac, PaperMind processes it locally and can optionally remove it from the Inbox folder.</p>
+
+  <h3>Categories and settings</h3>
+  <p>Your document categories (built-in and custom), app settings, and preferences are stored locally in JSON files on your Mac. They are not transmitted anywhere.</p>
+</section>
+
+<!-- OPTIONAL FEEDBACK SYSTEM -->
+<section class="section">
+  <div class="section-title">Optional feedback system</div>
+  <h3>What it is</h3>
+  <p>PaperMind includes an optional feedback system that you can enable if you want to help improve the app's accuracy. This is the only feature in PaperMind that involves sharing any data with the developer. It is <strong>disabled by default</strong> and requires your explicit, active consent to enable.</p>
+
+  <h3>What we collect (only if you opt in)</h3>
+  <ul>
+    <li>The text of questions you ask (e.g., "What's my notice period?")</li>
+    <li>Document categories assigned by the AI and any corrections you make (e.g., "financial" changed to "legal")</li>
+    <li>Basic usage statistics: number of documents indexed, number of queries made</li>
+    <li>App version and macOS version</li>
+  </ul>
+
+  <h3>What we never collect</h3>
+  <div class="highlight-box">
+    <p><span class="no-icon">&#10005;</span> Document content — no text, no OCR output, no PDF content. Ever.</p>
+    <p><span class="no-icon">&#10005;</span> File paths or folder structure on your Mac.</p>
+    <p><span class="no-icon">&#10005;</span> AI-generated answers (we log that an answer was generated and its length, not the text).</p>
+    <p><span class="no-icon">&#10005;</span> Personal identifiers — before export, question text is automatically scanned to strip anything that looks like a tax ID (NIF/NISS), email address, phone number, or national ID number.</p>
+    <p><span class="no-icon">&#10005;</span> Filenames — on export, filenames are replaced with anonymized hashes.</p>
+  </div>
+
+  <h3>How it works</h3>
+  <p>When you enable feedback, data is logged locally in a file on your Mac (feedback.json in the PaperMind data directory). Nothing is transmitted automatically. When you choose to submit feedback, you press a button in Settings, and the anonymized data is sent to our EU-hosted endpoint. You can view the collected data before submitting. You are in full control at every step.</p>
+
+  <h3>How we use it</h3>
+  <p>Submitted feedback is used exclusively to identify and fix errors in document classification and question-answering accuracy. Specifically: to find questions that produce incorrect or missing answers, to identify documents that are consistently misclassified, and to build training datasets for improving the AI model in future versions. We do not use this data for advertising, profiling, or any purpose other than improving PaperMind's accuracy.</p>
+
+  <h3>Data storage and retention</h3>
+  <p>Submitted feedback is stored on EU-based servers (European Economic Area). Data is retained for a maximum of 12 months from the date of submission, after which it is permanently deleted. Only the developer (Frederico Van Zeller) has access to submitted feedback data. It is not shared with any third party.</p>
+
+  <h3>Disabling and deletion</h3>
+  <p>You can disable feedback collection at any time by toggling the setting off in the app. When you disable it, all locally collected feedback data is immediately deleted from your Mac. To request deletion of previously submitted data, email <a href="mailto:fredericovanzeller@gmail.com">fredericovanzeller@gmail.com</a> — we will process your request within 30 days.</p>
+</section>
+
+<!-- YOUR RIGHTS -->
+<section class="section">
+  <div class="section-title">Your rights under GDPR</div>
+  <p>If you are located in the European Economic Area, you have the following rights regarding any personal data processed through the optional feedback system:</p>
+  <ul>
+    <li><strong>Right of access</strong> — You can request a copy of all data we hold about you.</li>
+    <li><strong>Right to rectification</strong> — You can ask us to correct any inaccurate data.</li>
+    <li><strong>Right to erasure</strong> — You can request that we delete all your data ("right to be forgotten").</li>
+    <li><strong>Right to restrict processing</strong> — You can ask us to stop processing your data while a concern is resolved.</li>
+    <li><strong>Right to data portability</strong> — You can request your data in a structured, machine-readable format.</li>
+    <li><strong>Right to withdraw consent</strong> — You can withdraw your consent at any time by disabling feedback in the app. Withdrawal does not affect the lawfulness of processing carried out before withdrawal.</li>
+  </ul>
+  <p>To exercise any of these rights, contact us at <a href="mailto:fredericovanzeller@gmail.com">fredericovanzeller@gmail.com</a>. We will respond within 30 days.</p>
+  <p>If you believe your data protection rights have been violated, you have the right to lodge a complaint with a supervisory authority. In Portugal, this is the <a href="https://www.cnpd.pt" target="_blank" rel="noopener">Comissao Nacional de Protecao de Dados (CNPD)</a>.</p>
+</section>
+
+<!-- THIRD PARTIES -->
+<section class="section">
+  <div class="section-title">Third-party services</div>
+  <h3>Ollama model registry</h3>
+  <p>During initial setup, PaperMind downloads AI model weights from Ollama's public registry (ollama.com). This is a one-time download. After setup, no connection to Ollama's servers is required. PaperMind does not transmit any user data to Ollama.</p>
+
+  <h3>Apple iCloud Drive</h3>
+  <p>If you use the iPhone companion app, documents sync via your personal iCloud Drive. This sync is managed entirely by Apple's infrastructure. PaperMind does not have access to your iCloud credentials or control over the sync process. Apple's iCloud privacy policy applies to data in transit and at rest within iCloud.</p>
+
+  <h3>GitHub Pages (website and landing page)</h3>
+  <p>The PaperMind website is hosted on GitHub Pages. GitHub may collect standard server logs (IP addresses, browser user agents) as part of their hosting infrastructure. PaperMind does not add any tracking scripts, analytics, cookies, or third-party embeds to its website.</p>
+
+  <h3>Waitlist (email collection)</h3>
+  <p>If you voluntarily join the PaperMind waitlist via the landing page, your email address is collected for the sole purpose of notifying you when PaperMind launches. Email addresses are not shared with third parties and will be deleted within 6 months of launch. You can request removal at any time by emailing <a href="mailto:fredericovanzeller@gmail.com">fredericovanzeller@gmail.com</a>.</p>
+</section>
+
+<!-- CHILDREN -->
+<section class="section">
+  <div class="section-title">Children's privacy</div>
+  <p>PaperMind is not directed at children under the age of 16. We do not knowingly collect personal data from children. If you believe a child has provided us with personal data through the feedback system, please contact us and we will promptly delete it.</p>
+</section>
+
+<!-- CHANGES -->
+<section class="section">
+  <div class="section-title">Changes to this policy</div>
+  <p>We may update this privacy policy to reflect changes in the app or legal requirements. Any material changes will be communicated through the app (in the Settings screen) and on this page. The "last updated" date at the bottom of this page indicates when the most recent revision was made.</p>
+</section>
+
+<!-- DATA CONTROLLER -->
+<section class="section">
+  <div class="section-title">Data controller</div>
+  <p>The data controller for any personal data processed through the optional feedback system is:</p>
+  <div class="highlight-box">
+    <p style="color: var(--text);"><strong>Frederico Van Zeller</strong></p>
+    <p>Lisbon, Portugal</p>
+    <p>Email: <a href="mailto:fredericovanzeller@gmail.com">fredericovanzeller@gmail.com</a></p>
+  </div>
+  <p>For document data stored locally on your device, there is no data controller — PaperMind does not have access to your documents. You are the sole custodian of your data.</p>
+</section>
+
+<footer class="footer">
+  <div class="footer-left">Last updated: April 14, 2026</div>
+  <div class="footer-right">
+    <a href="https://fredericovanzeller.github.io/papermind-site/">Website</a>
+    <a href="https://fredericovanzeller.github.io/papermind-site/press/">Press Kit</a>
+  </div>
+</footer>
+
+</body>
+</html>
